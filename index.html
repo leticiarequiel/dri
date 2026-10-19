@@ -1173,12 +1173,34 @@ h1 .accent,.final-cta h2 .accent{filter:drop-shadow(0 0 22px rgba(var(--accent-r
 
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;} *{transition:none !important;}}
 
+
+/* ===== Black ===== */
+html{scroll-behavior:smooth;}
+.black-bar{position:relative;z-index:70;display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;width:100%;padding:10px 16px;background:linear-gradient(90deg,#8f1d17,#c0281e 50%,#8f1d17);color:#fff4ec;font-size:13px;font-weight:500;text-align:center;letter-spacing:.01em;text-decoration:none;box-shadow:0 6px 24px -10px rgba(192,40,30,.8);}
+.black-bar strong{font-weight:800;}
+.black-bar-tag{background:#fff4ec;color:#8f1d17;font-weight:800;text-transform:uppercase;letter-spacing:.14em;font-size:11px;padding:3px 9px;border-radius:999px;}
+.black-bar svg{width:16px;height:16px;flex-shrink:0;}
+.black-bar:hover{filter:brightness(1.08);}
+@media (max-width:640px){.black-bar{font-size:12px;gap:8px;padding:9px 12px;}.black-bar-sep{display:none;}.black-bar-sub{display:block;font-size:11px;opacity:.85;margin-top:1px;}.black-bar>svg{display:none;}}
+.offer-pix{margin-top:14px;font-size:15px;color:var(--text-muted);}
+.offer-pix strong{color:var(--text);}
+.urgency{margin-top:30px;display:flex;flex-direction:column;align-items:center;gap:8px;}
+.urgency-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(192,40,30,.14);color:#ff8a7a;border:1px solid rgba(248,113,113,.45);border-radius:999px;padding:8px 16px;font-size:13px;font-weight:700;letter-spacing:.02em;text-align:center;}
+.urgency-dot{width:8px;height:8px;flex-shrink:0;border-radius:999px;background:#ef4444;box-shadow:0 0 0 0 rgba(239,68,68,.7);animation:urg 1.6s infinite;}
+@keyframes urg{0%{box-shadow:0 0 0 0 rgba(239,68,68,.7)}70%{box-shadow:0 0 0 10px rgba(239,68,68,0)}100%{box-shadow:0 0 0 0 rgba(239,68,68,0)}}
+@media (prefers-reduced-motion: reduce){.urgency-dot{animation:none;}}
+.urgency-note{font-size:12.5px;color:var(--text-faint);}
+.offer-cta.btn-black-red{margin-top:18px;background:linear-gradient(135deg,#d33a2c,#a3221a);color:#fff4ec;box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 18px 44px -12px rgba(211,58,44,.75);}
+.offer-cta.btn-black-red:hover{filter:brightness(1.08);box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 22px 54px -10px rgba(211,58,44,.9);}
+.final-price{margin-top:14px;font-size:15px;color:var(--text-muted);}
+.nw{white-space:nowrap;}
 </style>
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 </head>
 <body>
+<a href="#oferta" class="black-bar"><span class="black-bar-tag">Black</span><span><strong>Menor preço do ano</strong><span class="black-bar-sep"> · </span><span class="black-bar-sub">pode acabar a qualquer momento</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
 
 <section class="hero">
   <div class="hero-glow"></div>
@@ -1554,18 +1576,24 @@ h1 .accent,.final-cta h2 .accent{filter:drop-shadow(0 0 22px rgba(var(--accent-r
         </div>
 
         <p class="offer-summary-label">Resumo do valor</p>
-        <p class="offer-summary-row">Preço oficial do curso: <span class="strike">R$ 497</span></p>
+        <p class="offer-summary-row">Preço oficial do curso: <span class="strike nw">R$ 497</span></p>
+        <p class="offer-summary-row">Preço normal: <span class="strike nw">12x de R$ 23,02 ou R$ 239</span></p>
 
-        <span class="offer-pill">Garanta sua vaga por:</span>
+        <span class="offer-pill">Black · menor preço do ano</span>
 
         <div class="offer-price">
           <span class="offer-installments">12x de</span>
-          <span class="offer-new"><span class="accent">R$ 23,02</span></span>
-          <span class="offer-alt">ou R$ 239 à vista</span>
+          <span class="offer-new"><span class="accent nw">R$ 17,27</span></span>
+          <span class="offer-alt">ou <span class="nw">R$ 179,25</span> à vista no cartão</span>
         </div>
 
-        <a class="offer-cta" href="https://go.rodrigobaiao.com/pay/davinci-resolve">
-          Comprar agora
+        <p class="offer-pix">ou <strong class="nw">R$ 167,30 no Pix</strong></p>
+        <div class="urgency">
+          <span class="urgency-pill"><span class="urgency-dot"></span>Preço de Black · pode acabar a qualquer momento</span>
+          <span class="urgency-note">Quando a Black acabar, o preço volta para <span class="nw">R$ 239.</span></span>
+        </div>
+        <a class="offer-cta btn-black-red" href="https://go.rodrigobaiao.com/pay/dri-black">
+          Quero aproveitar a Black
           <svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
         </a>
 
@@ -1640,7 +1668,7 @@ h1 .accent,.final-cta h2 .accent{filter:drop-shadow(0 0 22px rgba(var(--accent-r
         <summary>Quais as formas de pagamento?
           <span class="faq-icon"><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></span>
         </summary>
-        <p>Pix e cartão de crédito.</p>
+        <p>Pix e cartão de crédito. Na Black: <span class="nw">R$ 167,30</span> no Pix, ou no cartão <span class="nw">R$ 179,25</span> à vista ou <span class="nw">12x de R$ 17,27</span> (com juros da operadora).</p>
       </details>
 
       <details class="faq-item">
@@ -1676,6 +1704,7 @@ h1 .accent,.final-cta h2 .accent{filter:drop-shadow(0 0 22px rgba(var(--accent-r
       Quero aprender a editar
       <svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
     </a>
+    <p class="final-price">Black: <span class="nw">12x de R$ 17,27</span> no cartão ou <span class="nw">R$ 167,30</span> no Pix.</p>
   </div>
 
   <div class="wrap">
